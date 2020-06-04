@@ -1,25 +1,28 @@
 # Circuit Simulator
 This tool is a time domain electrical circuit simulator written in Python.
-It's main purpose is transient analysis.
+It's main purpose is transient analysis of circuits containing basic components.
 
 Available components:
  - Resistor
  - Capacitor
  - Inductor
  - Operational amplifier
+ 
 Sources:
  - DC voltage, DC current
  - AC voltage
  - Square wave
 
 Project done in Python 3.7
+
 IDE: Spyder 4.1.2
-All simualtion results were verified with NI Multisim
+
+All simulation results were verified with NI Multisim.
 
 ## Examples
 ### RLC Circuit
 
-This exampe shows the simualtion of an RLC circuit.
+This example shows the simulation of an RLC circuit.
 
 ![RLC circuit](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/RLC_circuit/RLC_circuit.png?raw=true)
 
@@ -30,6 +33,7 @@ The following code describes this RLC circuit and the simulation process.
  - start simualtion with `.simulate()`
  
 Using GND is not necessary, see Hints.
+
 ```python
 circuit = Circuit()  
 
@@ -46,12 +50,13 @@ circuit.add(ISenseResistor(name='I1', resistor_name='R1'))
 circuit.simulate(simulation_time=1000)
 ```
 
-Measurement results of the simulation:
+Measurement results of the simulation. The graph shows the RLC oscillation.
+
 ![RLC results](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/RLC_circuit/RLC_sim_results.png?raw=true)
 
 ### Inverting Operational Amplifier
  
-    
+This is a operational amplifier in inverting mode with a capacitor on the output. 
     
 ![OpAmp_inverter](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_inverter/OpAmp_inverter.png?raw=true)
 
@@ -74,12 +79,13 @@ circuit.add(ISenseResistor(name='I2', resistor_name='R2'))
 circuit.simulate(simulation_time=1000)
 ```
 
-Measurement results of the simulation:
+Measurement results of the simulation. The output voltage is amplfied and inverted
+(A = R2 / R1), and the capacitor charging can be observed at input switching. 
+
 ![OpAmp_results](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_inverter/OpAmp_results.png?raw=true)
 
-
-Nearly the same circuit without the capacitor on the amplifier output and with 
-a differnt higher frequency input:
+Nearly the same circuit without the capacitor on the amplifier's output and with 
+a different, higher frequency input:
 
 ```python
 c = Circuit() 
@@ -98,6 +104,7 @@ c.add(ISenseResistor(name='I1', resistor_name='R1'))
 
 c.simulate(simulation_time=60)
 ```
+
 Simulation produces the following results. Because of the smaller time scale
 the switching transients of the amplifier and the virtual ground can be seen 
 on the graph.
@@ -105,6 +112,7 @@ on the graph.
 ![OpAmp_results](https://github.com/kkovati/Circuit_Simulator/blob/master/test/opamp_test_results.png?raw=true)
     
 ## Hints:
+
 Don't connect multiple capacitors directly into the same junction, use a small 
 resistance between it's pins.
 
@@ -119,6 +127,7 @@ connected only to the 'neg' pins of sources, resistors and capacitors
 then it will remain at zero potential, thus becomes ground.
 
 ## Known errors:
+
 A capacitor must be connected with correct polarity and the negative pin 
 must be connected to GND or the junction we refer as ground (see Hints).
 
