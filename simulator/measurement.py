@@ -37,7 +37,7 @@ class Voltmeter(Component, MeasuringInstrument):
         self.measurements.append(self.pos.v - self.neg.v) 
         
         
-class VSenseResistor:
+class VSenseResistor(MeasuringInstrument):
     """Measures voltage on a resistor"""  
     
     def __init__(self, name, resistor_name):
@@ -66,7 +66,7 @@ class VSenseResistor:
         self.measurements.append(self.resistor.pos.v - self.resistor.neg.v)
                 
 class _Ammeter(Component, MeasuringInstrument):
-    """IMPLEMENTATION IS NOT READY"""
+    """IMPLEMENTATION IS NOT READY!"""
     
     def __init__(self, name, pos, neg):
         """NOT READY"""

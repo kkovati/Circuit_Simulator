@@ -17,6 +17,11 @@ class ComponentList:
         self.amplifiers = []
         
     def add(self, component):
+        """
+        Adds the component, source or measuring instrument into the 
+        appropriate list
+        component : child class of Component, Source or MeasuringInstrument
+        """
         if Component in component.__class__.__bases__:
             self.components.append(component)
             

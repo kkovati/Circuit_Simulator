@@ -13,6 +13,11 @@ class Circuit:
         self.comp_list = ComponentList()
     
     def add(self, component):
+        """
+        Adds a component, source or measuring instrument to the ciruit's 
+        component list
+        component : child class of Component, Source or MeasuringInstrument
+        """
         self.comp_list.add(component)
      
     def simulate(self, simulation_time):

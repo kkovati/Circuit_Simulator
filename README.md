@@ -29,9 +29,9 @@ This example shows the simulation of an RLC circuit.
 
 The following code describes this RLC circuit and the simulation process.
  - instantiate a circuit
- - instantiate components by defining names, electrical and funcional parameters and connections
+ - instantiate components by defining names, electrical and functional parameters and connections
  - add the components to the circuit using `.add()`
- - start simualtion with `.simulate()`
+ - start simulation with `.simulate()`
  
 Using GND is not necessary, see Hints.
 
@@ -87,7 +87,7 @@ Measurement results of the simulation. The output voltage is amplfied and invert
 
 ### Operational Amplifier Switching Transient
 
-Nearly the same circuit as the former example without the capacitor on the 
+Nearly the same circuit as in the former example without the capacitor on the 
 amplifier's output and with a different, higher frequency input:
 
 ```python
@@ -132,7 +132,7 @@ then it will remain at zero potential, thus becomes ground.
 ## Known errors:
 
 A capacitor must be connected with correct polarity and the negative pin 
-must be connected to GND or the junction we refer as ground (see Hints).
+must be connected to GND or the junction which refers as ground (see Hints).
 
 
 
