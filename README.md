@@ -20,6 +20,7 @@ IDE: Spyder 4.1.2
 All simulation results were verified with NI Multisim.
 
 ## Examples
+
 ### RLC Circuit
 
 This example shows the simulation of an RLC circuit.
@@ -56,7 +57,7 @@ Measurement results of the simulation. The graph shows the RLC oscillation.
 
 ### Inverting Operational Amplifier
  
-This is a operational amplifier in inverting mode with a capacitor on the output. 
+This is an operational amplifier in inverting mode with a capacitor on its output. 
     
 ![OpAmp_inverter](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_inverter/OpAmp_inverter.png?raw=true)
 
@@ -82,10 +83,12 @@ circuit.simulate(simulation_time=1000)
 Measurement results of the simulation. The output voltage is amplfied and inverted
 (A = R2 / R1), and the capacitor charging can be observed at input switching. 
 
-![OpAmp_results](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_inverter/OpAmp_results.png?raw=true)
+![OpAmp_inv_results](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_inverter/OpAmp_results.png?raw=true)
 
-Nearly the same circuit without the capacitor on the amplifier's output and with 
-a different, higher frequency input:
+### Operational Amplifier Switching Transient
+
+Nearly the same circuit as the former example without the capacitor on the 
+amplifier's output and with a different, higher frequency input:
 
 ```python
 c = Circuit() 
@@ -106,15 +109,15 @@ c.simulate(simulation_time=60)
 ```
 
 Simulation produces the following results. Because of the smaller time scale
-the switching transients of the amplifier and the virtual ground can be seen 
+the switching transients of the amplifier and the virtual ground's voltage can be seen 
 on the graph.
 
-![OpAmp_results](https://github.com/kkovati/Circuit_Simulator/blob/master/test/opamp_test_results.png?raw=true)
+![OpAmp_switch_transient_results](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_switching_transient/OpAmp_switching_transient_results.png?raw=true)
     
 ## Hints:
 
 Don't connect multiple capacitors directly into the same junction, use a small 
-resistance between it's pins.
+resistance between its pins.
 
 Try to avoid using inductors under 10uH (when C_JUNCTION = 1e-9), else it will 
 oscillate because of the junctions' parasitic capacitance. 
@@ -123,7 +126,7 @@ Alternatively use smaller C_JUNCTION but in parallel decrease the DELTA_TIME
 
 Using GND signal (component) in not always necessary. If a junction is 
 connected only to the 'neg' pins of sources, resistors and capacitors 
-(and connected to at least to one source thorugh it's 'neg' pin), 
+(and connected to at least to one source through its 'neg' pin), 
 then it will remain at zero potential, thus becomes ground.
 
 ## Known errors:
