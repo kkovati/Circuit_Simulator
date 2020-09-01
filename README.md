@@ -17,23 +17,24 @@ Project done in Python 3.7
 
 IDE: Spyder 4.1.2
 
-All simulation results were verified with NI Multisim.
+All simulation results were verified with NI Multisim 10.
 
 ## Examples
 
 ### RLC Circuit
 
-This example shows the simulation of an RLC circuit.
+This example shows the simulation of the following RLC circuit.<br/> 
+(This schematic diagram is made with NI Multisim, not with this Circuit Simulator tool)
 
 ![RLC circuit](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/RLC_circuit/RLC_circuit.png?raw=true)
 
-The following code describes this RLC circuit and the simulation process.
+The following code describes this RLC circuit and the simulation process, as the input for the program:
  - instantiate a circuit
  - instantiate components by defining names, electrical and functional parameters and connections
  - add the components to the circuit using `.add()`
  - start simulation with `.simulate()`
  
-Using GND is not necessary, see Hints.
+(Using GND is not necessary, see Hints)
 
 ```python
 circuit = Circuit()  
@@ -51,7 +52,8 @@ circuit.add(ISenseResistor(name='I1', resistor_name='R1'))
 circuit.simulate(simulation_time=1000)
 ```
 
-Measurement results of the simulation. The graph shows the RLC oscillation.
+The next diagram is the output of the simulation, the measurement results.<br/> 
+See the RLC oscillation at VM2 and I1.
 
 ![RLC results](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/RLC_circuit/RLC_sim_results.png?raw=true)
 
@@ -60,6 +62,8 @@ Measurement results of the simulation. The graph shows the RLC oscillation.
 This is an operational amplifier in inverting mode with a capacitor on its output. 
     
 ![OpAmp_inverter](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_inverter/OpAmp_inverter.png?raw=true)
+
+Define this circuit and run the simulation:
 
 ```python
 circuit = Circuit()  
