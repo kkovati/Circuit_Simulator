@@ -13,11 +13,9 @@ Sources:
  - AC voltage
  - Square wave
 
-Project done in Python 3.7
+All simulation results were verified with NI Multisim 10
 
-IDE: Spyder 4.1.2
-
-All simulation results were verified with NI Multisim 10.
+Project developed under Python 3.7
 
 ## Examples
 
