@@ -1,6 +1,8 @@
-# Circuit Simulator
-This tool is a time domain electrical circuit simulator written in Python.
-It's main purpose is transient analysis of circuits containing basic components.
+# ⚡ Circuit Simulator
+This tool is a time domain electrical circuit simulator written in **Python**.
+It's main purpose is transient analysis of circuits containing basic components.<br> 
+The simulator relies only on **NumPy**.<br> 
+All simulation results were verified with **NI Multisim 10**.
 
 Available components:
  - Resistor
@@ -13,13 +15,13 @@ Sources:
  - AC voltage
  - Square wave
 
-Project done in Python 3.7
-
-IDE: Spyder 4.1.2
-
-All simulation results were verified with NI Multisim 10.
+### Usage
+Requires Python 3.7+ and dependencies from requirements.txt.<br>
+```pip install -r requirements.txt```
 
 ## Examples
+
+Check out more sample circuits [here](https://github.com/kkovati/Circuit_Simulator/tree/master/test).
 
 ### RLC Circuit
 
@@ -118,7 +120,7 @@ on the graph.
 
 ![OpAmp_switch_transient_results](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_switching_transient/OpAmp_switching_transient_results.png?raw=true)
     
-## Hints:
+## Hints
 
 Don't connect multiple capacitors directly into the same junction, use a small 
 resistance between its pins.
@@ -133,7 +135,7 @@ connected only to the 'neg' pins of sources, resistors and capacitors
 (and connected to at least to one source through its 'neg' pin), 
 then it will remain at zero potential, thus becomes ground.
 
-## Known errors:
+## Known errors
 
 A capacitor must be connected with correct polarity and the negative pin 
 must be connected to GND or the junction which refers as ground (see Hints).
