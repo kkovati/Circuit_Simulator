@@ -25,8 +25,9 @@ Check out more sample circuits [here](https://github.com/kkovati/Circuit_Simulat
 
 ### RLC Circuit
 
-This example shows the simulation of the following RLC circuit.<br/> 
-(This schematic diagram is made with NI Multisim, not with this Circuit Simulator tool)
+[This example](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/RLC_circuit/example_RLC_circuit.py)
+shows the simulation of the following RLC circuit.<br/> 
+(This schematic diagram is made with NI Multisim, not with this Circuit Simulator tool.)
 
 ![RLC circuit](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/RLC_circuit/RLC_circuit.png?raw=true)
 
@@ -61,7 +62,8 @@ See the RLC oscillation at VM2 and I1.
 
 ### Inverting Operational Amplifier
  
-This is an operational amplifier in inverting mode with a capacitor on its output. 
+[This example](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_inverter/example_OpAmp_inverter.py) 
+is an operational amplifier in inverting mode with a capacitor on its output. 
     
 ![OpAmp_inverter](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_inverter/OpAmp_inverter.png?raw=true)
 
@@ -93,7 +95,8 @@ Measurement results of the simulation. The output voltage is amplfied and invert
 
 ### Operational Amplifier Switching Transient
 
-Nearly the same circuit as in the former example without the capacitor on the 
+[This example](https://github.com/kkovati/Circuit_Simulator/blob/master/examples/OpAmp_switching_transient/example_OpAmp_switching_transient.py)
+is nearly the same circuit as in the former example without the capacitor on the 
 amplifier's output and with a different, higher frequency input:
 
 ```python
@@ -135,7 +138,7 @@ connected only to the 'neg' pins of sources, resistors and capacitors
 (and connected to at least to one source through its 'neg' pin), 
 then it will remain at zero potential, thus becomes ground.
 
-## Known errors
+## Known Errors
 
 A capacitor must be connected with correct polarity and the negative pin 
 must be connected to GND or the junction which refers as ground (see Hints).
